@@ -12,11 +12,6 @@ var app = express();
 
 var AWS = require('aws-sdk');
 
-AWS.Config.credentials({
-  "accessKeyId": process.env.ACKEY,
-  "secretAccessKey": process.env.SAC
-})
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
