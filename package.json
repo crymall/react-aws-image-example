@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "install": "npm install && cd client && npm install --only=dev && npm install",
-    "start": "concurrently \"node ./bin/www\" \"npm run build\""
+    "start": "(npm install) && (cd client && npm install --only=dev && npm install)",
+    "heroku-postbuild": "concurrently \"node ./bin/www\" \"npm run build\""
   },
   "dependencies": {
     "aws-sdk": "^2.218.1",
