@@ -12,7 +12,7 @@ var app = express();
 
 var AWS = require('aws-sdk');
 
-AWS.config.loadFromPath('./config.json');
+AWS.config.loadFromPath('./config.js');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
