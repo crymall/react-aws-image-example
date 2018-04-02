@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "(npm install) && (cd client && npm install --only=dev && npm install)",
-    "heroku-postbuild": "concurrently \"node ./bin/www\" \"npm run build\""
+    "heroku-postbuild": "concurrently \"node ./bin/www\" \"cd client && npm run build\""
   },
   "dependencies": {
     "aws-sdk": "^2.218.1",
