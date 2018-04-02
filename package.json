@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "(npm install) && (cd client && npm install --only=dev && npm install)",
-    "heroku-postbuild": "concurrently \"node ./bin/www\" \"cd client && npm run build\""
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
   },
   "dependencies": {
     "aws-sdk": "^2.218.1",
     "body-parser": "~1.18.2",
-    "concurrently": "^3.5.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
