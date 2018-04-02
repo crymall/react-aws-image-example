@@ -12,7 +12,7 @@ var app = express();
 
 var AWS = require('aws-sdk');
 
-AWS.config({
+AWS.Config({
   "accessKeyId": process.env.ACKEY,
   "secretAccessKey": process.env.SAC
 })
