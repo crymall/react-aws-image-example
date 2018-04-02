@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"node ./bin/www\" \"cd client && npm install --only=dev && npm install && npm run build\""
+    "install": "(npm install) && (cd client && npm install --only=dev && npm install)",
+    "start": "concurrently \"node ./bin/www\" \"npm run build\""
   },
   "dependencies": {
     "aws-sdk": "^2.218.1",
