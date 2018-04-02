@@ -30,7 +30,7 @@ app.use('/s3', require('react-s3-uploader/s3router')({
 }));
 
 app.get('*', (req, res) => {
-  res.sendfile(__dirname + '/client/build/index.html');
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 // catch 404 and forward to error handler
