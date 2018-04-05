@@ -19,9 +19,8 @@ class App extends Component {
         return response.json();
       })
       .then((data) => {
-        console.log(data)
         this.setState({
-          users: data
+          users: data.data
         })
       })
   }
