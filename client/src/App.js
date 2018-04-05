@@ -18,7 +18,7 @@ class App extends Component {
       .then((response) => {
         console.log(response)
         this.setState({
-          users: response.data
+          users: response.body.data
         })
       })
   }
