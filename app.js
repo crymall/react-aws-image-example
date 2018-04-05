@@ -24,6 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+app.use('/users', users);
+
 app.use('/s3', require('react-s3-uploader/s3router')({
     bucket: "sample-c4q",
     ACL: "public-read"
