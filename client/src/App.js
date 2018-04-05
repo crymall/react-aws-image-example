@@ -7,8 +7,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      imgURL: ""
+      imgURL: "",
+      users: ""
     }
+  }
+  
+  componentDidMount() {
+    fetch('/users')
+      .then((response) => {
+        this.setState({
+          users: response.data
+        })
+      })
   }
   
   onUploadFinish = (img) => {
@@ -19,6 +29,7 @@ class App extends Component {
   }
   
   render() {
+    console.log(this.state.users)
     return (
       <div className="App">
         <header className="App-header">
