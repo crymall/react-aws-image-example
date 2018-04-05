@@ -19,8 +19,9 @@ class App extends Component {
         return response.json();
       })
       .then((data) => {
+        console.log(data)
         this.setState({
-          users: data.body.data
+          users: data
         })
       })
   }
@@ -33,7 +34,6 @@ class App extends Component {
   }
   
   render() {
-    console.log(this.state.users)
     return (
       <div className="App">
         <header className="App-header">
