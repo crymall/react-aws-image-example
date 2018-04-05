@@ -13,8 +13,10 @@ class App extends Component {
   }
   
   componentDidMount() {
+    console.log('hi')
     fetch('/users')
       .then((response) => {
+        console.log(response)
         this.setState({
           users: response.data
         })
