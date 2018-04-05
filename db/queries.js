@@ -7,7 +7,7 @@ const getAllUsers = (req, res, next) => {
     .then((data) => {
       res.status(200)
          .json({
-           data: data
+           data: data,
            message: 'You did it!'
          })
     })
