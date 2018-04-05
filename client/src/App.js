@@ -16,7 +16,7 @@ class App extends Component {
     console.log('hi')
     fetch('/users')
       .then((response) => {
-        console.log(response)
+        console.log(response.body)
         this.setState({
           users: response.body.data
         })
